@@ -147,12 +147,15 @@ class _GameplayState extends State<Gameplay>
                   child: Column(
                     children: [
                       SizedBox(height: 35),
-                      Text(
-                        "Todaych",
-                        style: Mystyle.titleBlTextStyle.copyWith(
-                          color: Colors.white,
-                        ),
-                      ).tr(),
+                      Center(
+                        child: Text(
+                          "Todaych",
+                          style: Mystyle.titleBlTextStyle.copyWith(
+                            color: Colors.white,
+                          ),
+                          textAlign: TextAlign.center,
+                        ).tr(),
+                      ),
                       Expanded(
                         child: Center(
                           child: Padding(

@@ -5,14 +5,8 @@ import 'package:http/http.dart' as http;
 class Api {
   static final Api _api = Api._internal();
 
-  // String appId = '081cd11ae3fdedee63c10a027b03dff5';
-  // final String url = "api.openweathermap.org";
-
   final String url = "games.marsadpro.com";
 
-//https://raw.githubusercontent.com/mastermajisosse/PalWeat/master/json.json
-  //6077a3ce319a0b8acd55d08f087660da
-  // i need to test = http://api.openweathermap.org/data/2.5/forecast?q=rabat&appid=081cd11ae3fdedee63c10a027b03dff5&units=metric
   factory Api() {
     return _api;
   }

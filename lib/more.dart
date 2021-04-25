@@ -288,19 +288,27 @@ class _MoreState extends State<More> with SingleTickerProviderStateMixin {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text(
-                                    provider.allgame[index].name,
-                                    style: Mystyle.descextStyle.copyWith(
-                                      fontSize: ScreenUtil().setSp(48),
+                                  Container(
+                                    width: ScreenUtil().setWidth(500),
+                                    child: Text(
+                                      provider.allgame[index].name,
+                                      style: Mystyle.descextStyle.copyWith(
+                                        fontSize: ScreenUtil().setSp(48),
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                      overflow: TextOverflow.ellipsis,
+                                      maxLines: 2,
                                     ),
                                   ),
                                   Text(
                                     provider.allgame[index].downloads
                                             .toString() +
-                                        " downloads".tr(),
+                                        " " +
+                                        "downloads".tr(),
                                     style: Mystyle.descextStyle.copyWith(
                                       fontSize: ScreenUtil().setSp(32),
                                       color: Mystyle.primarycolo,
+                                      fontWeight: FontWeight.bold,
                                     ),
                                     // textAlign: TextAlign.right,
                                   ),
@@ -316,12 +324,13 @@ class _MoreState extends State<More> with SingleTickerProviderStateMixin {
                             crossAxisAlignment: CrossAxisAlignment.end,
                             children: [
                               Text(
-                                "Click here to\ndownload",
+                                "clickhere",
                                 style: Mystyle.descextStyle.copyWith(
                                   fontSize: ScreenUtil().setSp(32),
+                                  fontWeight: FontWeight.bold,
                                 ),
-                                textAlign: TextAlign.end,
-                              ),
+                                textAlign: TextAlign.center,
+                              ).tr(),
                             ],
                           ),
                         ),
